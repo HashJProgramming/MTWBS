@@ -111,6 +111,3 @@ function get_customer_details($id){
     }
 
 }
-
-                            
-

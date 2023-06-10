@@ -25,3 +25,4 @@ $stmt->execute();
     // Show an error message
     header('location: ../index.php#error');
 }
+

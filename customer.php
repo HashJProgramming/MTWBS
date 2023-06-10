@@ -1,6 +1,7 @@
 <?php
 include_once "functions/authentications.php";
 include_once "functions/customer-profile.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

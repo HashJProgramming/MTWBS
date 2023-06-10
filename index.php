@@ -5,6 +5,7 @@ if(isset(  $_SESSION['username'])){
     header('location: administration.php');
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

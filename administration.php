@@ -1,6 +1,7 @@
 <?php
 include_once "functions/authentications.php";
 include_once "functions/get-count.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
