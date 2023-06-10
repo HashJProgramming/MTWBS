@@ -51,7 +51,7 @@ include_once "functions/customer-profile.php";
                                 <div class="card border-primary mb-4">
                                     <div class="card-body text-center p-4">
                                         <h4 class="fw-bold card-subtitle">BILLS</h4>
-                                        <h4 class="display-5 fw-bold card-title"><?php get_total_bill($_GET['id'])?></h4>
+                                        <h4 class="display-5 fw-bold card-title">₱<?php get_total_bill($_GET['id'])?></h4>
                                     </div>
                                 </div>
                             </div>

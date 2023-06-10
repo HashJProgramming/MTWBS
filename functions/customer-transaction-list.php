@@ -20,7 +20,7 @@ foreach ($results as $row) {
     <tr>
         <td class="text-truncate" style="max-width: 200px;"><?php echo $row['customer_name'];?></td>
         <td class="text-truncate" style="max-width: 200px;"><?php echo $row['consumption'];?></td>
-        <td>$<?php echo $row['bill'];?></td>
+        <td>₱<?php echo $row['bill'];?></td>
         <td><?php echo $row['previous'];?></td>
         <td ><?php echo $row['current'];?></td>
         <td class="text-center"><?php echo $row['created_at'];?></td>

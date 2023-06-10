@@ -46,7 +46,7 @@ include_once "functions/get-count.php";
                     <div class="card border-primary mb-4">
                         <div class="card-body text-center p-4">
                             <h4 class="fw-bold card-subtitle">Income</h4>
-                            <h4 class="display-5 fw-bold card-title">$<?php get_sales(); ?></h4>
+                            <h4 class="display-5 fw-bold card-title">₱<?php get_sales(); ?></h4>
                         </div>
                     </div>
                 </div>

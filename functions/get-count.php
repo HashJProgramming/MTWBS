@@ -48,6 +48,6 @@ function get_sales(){
     $results = $stmt->fetchAll();
 
     foreach ($results as $row) {
-        echo $row['total'];
+        echo number_format($row['total'], 2, '.', ','); // as total sales 0.00
     }
 }

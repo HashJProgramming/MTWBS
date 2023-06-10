@@ -7,7 +7,11 @@ function get_total_bill($id){
      $stmt->execute();
      $results = $stmt->fetchAll();
         foreach($results as $result){
-            echo $result['total_bill'];
+           if($result['total_bill'] == NULL){
+               echo "0";
+            }else{
+                echo number_format($result['total_bill'], 2, '.', ','); // as total sales 0.00    
+            }
         }
 }
 

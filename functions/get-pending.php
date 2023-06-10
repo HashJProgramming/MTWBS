@@ -16,7 +16,7 @@ if (isset($_POST['search'])) {
 
 } else {
     // Get all data from the students table
-    $sql = "SELECT c.fullname as customer_name, t.id, t.consumption, t.previous, t.current, t.bill, t.created_at, t.status 
+    $sql = "SELECT c.id as customer_id, c.fullname as customer_name, t.id, t.consumption, t.previous, t.current, t.bill, t.created_at, t.status 
     FROM transactions t
     INNER JOIN customers c ON t.cust_id = c.id
     WHERE t.previous IS NOT NULL AND t.current IS NOT NULL AND t.status = 'Pending';";
@@ -31,12 +31,19 @@ foreach ($results as $row) {
     <tr>
         <td class="text-truncate" style="max-width: 200px;"><?php echo $row['customer_name'];?></td>
         <td class="text-truncate" style="max-width: 200px;"><?php echo $row['consumption'];?></td>
-        <td>$<?php echo $row['bill'];?></td>
+        <td>₱<?php echo $row['bill'];?></td>
         <td><?php echo $row['previous'];?></td>
         <td><?php echo $row['current'];?></td>
         <td class="text-center"><?php echo $row['created_at'];?></td>
         <td class="text-center"><?php echo $row['status'];?></td>
         <td class="text-center">
+
+            <a class="px-2" role="button" href="customer.php?id=<?php echo $row['customer_id']?>&fullname=<?php echo $row['customer_name']?>">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-eye-fill fs-5 text-primary">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"></path>
+                </svg></a>
+
 
             <a class="px-2" type="button" data-bs-target="#proceed" data-bs-toggle="modal" data-id="<?php echo $row['id']?>">
             <svg class="bi bi-credit-card-2-front fs-5 text-primary" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">

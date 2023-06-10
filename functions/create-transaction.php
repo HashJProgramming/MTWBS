@@ -24,6 +24,12 @@ if ($statement->fetchColumn() > 0) {
         $statement->bindParam(':id', $id);
         $statement->execute();
         $previous = $statement->fetchColumn();
+        
+        // check if current reading is not less than previous reading
+        if ($reading <= $previous) {
+            header('Location: ../administration.php#error');
+            exit();
+        }
 
         // get water consumption
         $consumption = $reading - $previous;
